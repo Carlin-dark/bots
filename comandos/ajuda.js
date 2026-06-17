@@ -1,5 +1,4 @@
-// O import agora aponta corretamente para o arquivo ajuda.js dentro da pasta utils
-import { getMenuMessage } from "../utils/ajuda.js";
+import { getMenuMessage } from "../utils/menu.js";
 
 export async function handleMenuCommand(chatId, sock) {
   const menu = getMenuMessage();
