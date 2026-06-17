@@ -4,7 +4,7 @@ import { DATABASE } from "../config.js";
 export async function handleReminderCommand(body, chatId, sock) {
   const args = body.split(" ").slice(1);
   if (args.length < 3) {
-    return sock.sendMessage(chatId, { text: "Uso correto: /lembrete DD/MM HH:MM Mensagem" });
+    return sock.sendMessage(chatId, { text: "⚠️ *Uso correto:* /lembrete DD/MM HH:MM Mensagem" });
   }
 
   const [dateText, timeText, ...rest] = args;
@@ -12,7 +12,7 @@ export async function handleReminderCommand(body, chatId, sock) {
   const dateTime = parseDateTime(dateText, timeText);
 
   if (!dateTime || message.length === 0) {
-    return sock.sendMessage(chatId, { text: "Formato inválido. Use: /lembrete DD/MM HH:MM Mensagem" });
+    return sock.sendMessage(chatId, { text: "❌ Formato inválido. Use: /lembrete DD/MM HH:MM Mensagem" });
   }
 
   const reminders = await readJson(DATABASE.reminders);
@@ -28,6 +28,6 @@ export async function handleReminderCommand(body, chatId, sock) {
   await writeJson(DATABASE.reminders, reminders);
 
   await sock.sendMessage(chatId, {
-    text: `✅ Lembrete agendado!\n\n📅 Data: ${dateText}\n🕗 Hora: ${timeText}\n${message}`
+    text: `✅ *Lembrete agendado!*\n\n📅 Data: ${dateText}\n🕗 Hora: ${timeText}\n💬 ${message}`
   });
 }

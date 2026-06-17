@@ -6,17 +6,18 @@ export async function handleCancelCommand(body, chatId, sock) {
   const id = Number(args[0]);
 
   if (!id || isNaN(id)) {
-    return sock.sendMessage(chatId, { text: "Uso correto: /cancelar ID" });
+    return sock.sendMessage(chatId, { text: "⚠️ *Uso correto:* /cancelar <ID numérico>" });
   }
 
   const events = await readJson(DATABASE.events);
   const index = events.findIndex((item) => item.id === id);
+  
   if (index === -1) {
-    return sock.sendMessage(chatId, { text: `Evento ${id} não encontrado.` });
+    return sock.sendMessage(chatId, { text: `❌ Evento com ID *${id}* não foi encontrado.` });
   }
 
-  events.splice(index, 1);
+  const [canceledEvent] = events.splice(index, 1);
   await writeJson(DATABASE.events, events);
 
-  await sock.sendMessage(chatId, { text: `✅ Evento ${id} cancelado com sucesso.` });
+  await sock.sendMessage(chatId, { text: `✅ *Evento Cancelado!*\n\nID: ${id}\nDescrição: ${canceledEvent.description}` });
 }
