@@ -14,8 +14,7 @@ export async function handleCallCommand(body, message, chatId, sock) {
   const isOwner = senderJid.includes("192565412392992");
 
   const roleText = isOwner 
-    ? `👑 *DONO DO BOT: Carlos - ID
-     * ${senderName}` 
+    ? `👑 *DONO DO BOT: Carlos*\n- ID: ${senderName}` 
     : `👤 *Membro:* ${senderName}`;
 
   if (isOwner) {
