@@ -83,7 +83,11 @@ Descrição: Cria uma votação interativa nativa do WhatsApp segmentando os arg
 Descrição: Extrai e compila metadados detalhados do chat (Nome, Identificador ID, Data de criação, Fundador, Total de administradores e Link oficial de convite direto).
 
 
+<<<<<<< HEAD
 # Tutoriais de Execução (Passo a Passo)
+=======
+# Tutoria
+>>>>>>> b5360f6a3be359bc0a63b466bbcf9900328e0193
 
 ## Execução no Windows (Utilizando o PowerShell)
 Se você estiver desenvolvendo diretamente pelo computador utilizando o VS Code ou o terminal nativo:
