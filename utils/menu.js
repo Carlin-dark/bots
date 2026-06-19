@@ -18,6 +18,7 @@ export function getMenuMessage() {
 ➻ 📊 /enquete
 ➻ ❓ /ajudas
 ➻ 🗺️ /cep
+➻ 🤖 /bot
 
 ✦ • ── • ── • ── • ── • ── • ── • ✦
     💡 ⦅ 𝙐𝙨𝙚 𝙣𝙤 𝙋𝙑 𝙤𝙪 𝙚𝙢 𝙂𝙧𝙪𝙥𝙤𝙨 ⦆
