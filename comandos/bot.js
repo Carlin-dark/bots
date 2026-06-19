@@ -3,11 +3,12 @@ export async function handleBotCommand(chatId, sock) {
 `🤖 *INFORMAÇÕES DO AKIRA BOT* 🤖
 ──────────────────────────
 ✨ *Status:* v1.1.0 (Online)
-👑 *Dono/Criador:* Carlin-dark
+👑 *Dono/Criador:* Carlos
+🔱 * Número:* +55 86 74001176
+🔱 * Contato:* https://wa.me/558674001176
 💻 *Plataforma:* Termux / Node.js
 📖 *Linguagem:* JavaScript
 
-⚙️ _Bot otimizado com correções automáticas de conexão e autenticação via QR Code estável._
 ──────────────────────────
 🔗 *Repositório Privado (GitHub):*
 https://github.com/Carlin-dark/bots
