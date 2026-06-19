@@ -4,8 +4,5 @@ package-lock.json
 *.log
 auth_info_baileys
 database/*.json
-<<<<<<< HEAD
-.DS_Store
-=======
-.DS_Store
->>>>>>> b5360f6a3be359bc0a63b466bbcf9900328e0193
+commands/bot.js
+

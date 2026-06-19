@@ -9,6 +9,7 @@ import { handleCallCommand } from "../comandos/call.js";
 import { handlePollCommand } from "../comandos/enquete.js";
 import { handleMenuCommand } from "../comandos/ajuda.js";
 import { handleAjudasCommand } from "../comandos/ajudas.js";
+import { handleBotCommand } from "../comandos/bot.js";
 
 export async function messagesHandler(upsert, sock) {
   try {
@@ -103,6 +104,9 @@ export async function messagesHandler(upsert, sock) {
         break;
       case "enquete":
         await handlePollCommand(body, chatId, sock);
+        break;
+      case "bot":
+        await handleBotCommand(chatId, sock);
         break;
       default:
         await sock.sendMessage(chatId, { text: "Comando não reconhecido. Use /ajuda para ver os comandos disponíveis." });
