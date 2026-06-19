@@ -13,7 +13,7 @@ export async function handleBotCommand(chatId, sock) {
 🔗 *Repositório Privado (GitHub):*
 https://github.com/Carlin-dark/bots
 
-_Apenas o criador e administradores autorizados têm acesso ao código-fonte deste reino._`;
+_código-fonte._`;
 
   try {
     await sock.sendMessage(chatId, { text: infoMensagem });
